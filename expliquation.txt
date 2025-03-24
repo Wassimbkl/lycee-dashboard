@@ -1,0 +1,25 @@
+Le code permet de filtrer les établissements scolaires en Île-de-France en fonction de plusieurs critères :
+
+Le département
+La commune
+L’établissement
+
+
+Le projet utilise Dash  avec Plotly et Dash Bootstrap Components pour la mise en page.
+
+Chargement des données
+
+Deux fichiers CSV sont lus : l’annuaire des établissements scolaires et les résultats aux examens.
+Les deux jeux de données sont fusionnés sur l’identifiant unique des établissements (UAI).
+Un sous-ensemble des données est extrait pour ne conserver que les établissements en Île-de-France.
+Création des filtres (barre latérale)
+
+Trois menus déroulants permettent de filtrer par département, commune et établissement.
+Lorsqu’un département est sélectionné, la liste des communes et des établissements disponibles est mise à jour dynamiquement.
+Affichage des graphiques
+
+Une carte interactive affiche les établissements sélectionnés, en fonction de leur localisation et de leur taux de réussite.
+Un graphique en barres montre les résultats au baccalauréat selon les spécialités 
+Les graphiques sont mis à jour dynamiquement en fonction des filtres choisis.
+ 
+
