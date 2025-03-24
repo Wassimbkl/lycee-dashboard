@@ -8,7 +8,7 @@ import plotly.express as px
 annuaire_df = pd.read_csv("Data/annuaire-de-leducation.csv", sep=";", dtype=str)
 resultats_df = pd.read_csv("Data/fr-en-indicateurs-de-resultat-des-lycees-gt_v2.csv", sep=";", dtype=str)
 
-# Filtrer sur l'Île-de-France (Code région : 11)
+
 annuaire_df = annuaire_df[annuaire_df['Code_region'] == '11']
 resultats_df = resultats_df[resultats_df['Code region'] == '11']
 
@@ -105,7 +105,7 @@ def update_dashboard(departement, ville, specialite):
     if specialite:
         filtered_df = filtered_df[filtered_df[specialite] == '1']
     
-    # Vérifier s'il y a des données avant d'afficher
+  
     if filtered_df.empty:
         return px.scatter_mapbox(), [], px.bar()
     
